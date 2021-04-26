@@ -14,11 +14,11 @@ if (isset($_POST['login'])) {
             $_SESSION['email'] = $requete['email'];
             $_SESSION['lvl'] = $requete['lvl'];
             if ($requete['lvl'] == 0) {
-                Alerts::setFlash("<strong>Vous ne pouvez pas entrez.</strong>", "danger");
+                Alerts::setFlash("<strong>T'est banni fils de pute.</strong>", "danger");
             } elseif ($requete['lvl'] == 1) { // Eleve
-                header('Location: ');
+                header('Location: agenda ');
             } elseif ($requete['lvl'] == 2) { // Moniteur
-                header('Location: ');
+                header('Location: agenda-admin');
             } elseif ($requete['lvl'] == 3) { // Admin
                 header('Location: admin');
             }
