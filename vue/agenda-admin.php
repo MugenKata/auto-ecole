@@ -22,7 +22,7 @@ $events = implode($events,",");
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialDate: '2021-04-14',
+        initialDate: '2021-04-27',
         initialView: 'timeGridWeek',
         headerToolbar: {
             left: 'prev,next today',
