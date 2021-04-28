@@ -6,37 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link href="lib/main.css" rel="stylesheet">
+    <link href="css/style5.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <script src="lib/main.js"></script> 
     <style type="text/css">
+
           #calendar {
                max-width: 1100px;
                margin: 0 auto;
           }
      </style>
+
 </head>
 
 <header>
-  <div class="row"style="background-color:black;height: 70px;">
-  <div class="container" >
-<h2 style="text-align: center;margin-top:auto;color: white;" >
-  Auto-Ecole
-</h2>
+  <div class="container">
+    <div class="text-white">
+      
+        <h1>AutoHiro</h1>
+      
+    </div>
+    <nav>
+    <ul>
+      <li><a href="accueil">Accueil</a></li>
+      <li><a href="login">Connexion</a></li>
+      <li><a href="galerie">Galerie</a></li>
+      <li><a href="#">Contacter</a></li>
+   </ul>
+  </nav>
   </div>
-  </div>
-
 </header>
+
 <body>
 
 <?= $content; ?>
 
-<div class="d-flex justify-content-center mt-4">
-    <div class="col-auto">
-        <?= Alerts::getFlash(); ?>
+<!-- Footer -->
+<footer class="py-5 bg-dark" style="position: sticky;">
+    <div class="container">
+      <footer class="py-5 bg-dark text-light" style="position: sticky;">
+   <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>Description</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <p class="mb-0">
+                    . . .
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>S'inscrire</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li>Inscrivez vous pour profiter de nos produit</a></li>
+                </ul>
+            </div>
+
+            
+
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h5>Contact</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-home mr-2"></i> AutoHiro</li>
+                    <li><i class="fa fa-envelope mr-2"></i> AutoHiro@gmail.com</li>
+                    <li><i class="fa fa-phone mr-2"></i> + 33 74 66 14 95</li>
+                    <li><i class="fa fa-print mr-2"></i> + 33 24 56 02 34</li>
+                </ul>
+            </div>
+            <div class="col-12 copyright mt-3">
+                <p class="float-left">
+                    <a href="#">Back to top</a>
+                </p>
+            </div>
+        </div>
     </div>
-</div>
+    <!-- /.container -->
+  </footer>
+      <p class="m-0 text-center text-white">Copyright &copy; AUTOHIRO 2021</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+        <script type="text/javascript" src="assets/zoombox.js"></script> 
+
+        
+
+  <script type="text/javascript">
+jQuery(function($){
+    $('a.zoombox').zoombox();
+
+});
+</script>
 
 </body>
 </html>
