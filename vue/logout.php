@@ -1,1 +1,5 @@
-<?php Session::destroy(); ?>
+<?php session_destroy(); 
+
+header("Location: accueil");
+
+?>

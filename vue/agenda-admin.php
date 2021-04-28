@@ -14,7 +14,7 @@ foreach($lessons as $lesson)
     }";
 }
 
-$events = implode($events,",");
+$events = implode(",",$events);
 
 ?>
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link href="lib/main.css" rel="stylesheet">
-    <link href="css/style5.css" rel="stylesheet" />
+    <link href="css/style6.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <script src="lib/main.js"></script> 
     <style type="text/css">
@@ -18,15 +18,32 @@
      </style>
 
 </head>
+<?php
+if(isset($_SESSION['id_u'])){
+    ?>
+<header>
+  <div class="container">
+    <div class = "autohiro-left">
+        <h1 class="text-white">AutoHiro</h1>
+    </div>
+        <nav class = "autohiro-right">
+    <ul>
+      <li><a href="accueil">Accueil</a></li>
+      <li><a href="galerie">Galerie</a></li>
+      
+   </ul>
+  </nav>
+  </div>
+</header>
+<?php }
+else {?>
 
 <header>
   <div class="container">
-    <div class="text-white">
-      
-        <h1>AutoHiro</h1>
-      
+    <div class = "autohiro-left">
+        <h1 class="text-white">AutoHiro</h1>
     </div>
-    <nav>
+    <nav class = "autohiro-right">
     <ul>
       <li><a href="accueil">Accueil</a></li>
       <li><a href="login">Connexion</a></li>
@@ -36,6 +53,7 @@
   </nav>
   </div>
 </header>
+<?php } ?>
 
 <body>
 
