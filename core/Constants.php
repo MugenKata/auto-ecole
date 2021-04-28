@@ -1,7 +1,7 @@
 <?php
 
 define('HOSTNAME', 'localhost');
-define('DATABASE', 'autoecole');
+define('DATABASE', 'auto_ecole');
 define('USERNAME', 'root');
 define('PASSWORD', '');
 

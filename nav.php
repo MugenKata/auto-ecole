@@ -14,6 +14,17 @@
           }
      </style>
 </head>
+
+<header>
+  <div class="row"style="background-color:black;height: 70px;">
+  <div class="container" >
+<h2 style="text-align: center;margin-top:auto;color: white;" >
+  Auto-Ecole
+</h2>
+  </div>
+  </div>
+
+</header>
 <body>
 
 <?= $content; ?>
