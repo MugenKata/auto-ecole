@@ -31,6 +31,7 @@ if(isset($_SESSION['id_u']) && $_SESSION['lvl'] ==1){
       <li><a href="accueil">Accueil</a></li>
       <li><a href="agenda">Agenda</a></li>
       <li><a href="galerie">Galerie</a></li>
+      <li><a href="reception">Message</a></li>
       <li><a href="logout">Deconnexion</a></li>
       
    </ul>
@@ -49,6 +50,7 @@ elseif (isset($_SESSION['id_u']) && $_SESSION['lvl'] ==2) {
     <ul>
       <li><a href="accueil">Accueil</a></li>    
       <li><a href="agenda-admin">Agenda</a></li>
+      <li><a href="reception">Message</a></li>
       <li><a href="logout">Deconnexion</a></li>
    </ul>
   </nav>
