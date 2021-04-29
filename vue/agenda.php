@@ -41,9 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<div class="d-flex justify-content-center mt-4">
-    <a class="btn btn-danger" href="logout">DECONNEXION</a>
-</div>
+
 
 <div class="d-flex justify-content-center mt-4">
     <h3 class="text-center mt-4">Bienvenue <?= $_SESSION['prenom'] ?> !</h3>

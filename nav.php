@@ -19,26 +19,60 @@
 
 </head>
 <?php
-if(isset($_SESSION['id_u'])){
+if(isset($_SESSION['id_u']) && $_SESSION['lvl'] ==1){
     ?>
 <header>
   <div class="container">
     <div class = "autohiro-left">
-        <h1 class="text-white">AutoHiro</h1>
+        <h1 class="text-white">AutoHiro Eleve</h1>
     </div>
         <nav class = "autohiro-right">
     <ul>
       <li><a href="accueil">Accueil</a></li>
+      <li><a href="agenda">Agenda</a></li>
       <li><a href="galerie">Galerie</a></li>
+      <li><a href="logout">Deconnexion</a></li>
       
    </ul>
   </nav>
   </div>
 </header>
 <?php }
-else {?>
-
-<header>
+elseif (isset($_SESSION['id_u']) && $_SESSION['lvl'] ==2) {
+  ?>
+   <header>
+  <div class="container">
+    <div class = "autohiro-left">
+        <h1 class="text-white">AutoHiro Moniteur</h1>
+    </div>
+    <nav class = "autohiro-right">
+    <ul>
+      <li><a href="accueil">Accueil</a></li>    
+      <li><a href="agenda-admin">Agenda</a></li>
+      <li><a href="logout">Deconnexion</a></li>
+   </ul>
+  </nav>
+  </div>
+</header>
+<?php } 
+  elseif (isset($_SESSION['id_u']) && $_SESSION['lvl'] ==3) {
+    ?>
+      <header>
+  <div class="container">
+    <div class = "autohiro-left">
+        <h1 class="text-white">AutoHiro Administration</h1>
+    </div>
+    <nav class = "autohiro-right">
+    <ul>
+      <li><a href="accueil">Accueil</a></li>
+      <li><a href="admin">Liste</a></li>     
+      <li><a href="logout">Deconnexion</a></li>
+   </ul>
+  </nav>
+  </div>
+</header>
+<?php } else { ?>
+    <header>
   <div class="container">
     <div class = "autohiro-left">
         <h1 class="text-white">AutoHiro</h1>
@@ -46,7 +80,7 @@ else {?>
     <nav class = "autohiro-right">
     <ul>
       <li><a href="accueil">Accueil</a></li>
-      <li><a href="login">Connexion</a></li>
+      <li><a href="login">Connexion</a></li>      
       <li><a href="galerie">Galerie</a></li>
       <li><a href="#">Contacter</a></li>
    </ul>
@@ -54,6 +88,8 @@ else {?>
   </div>
 </header>
 <?php } ?>
+
+
 
 <body>
 

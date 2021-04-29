@@ -16,11 +16,11 @@ if (isset($_POST['login'])) {
             if ($requete['lvl'] == 0) {
                 Alerts::setFlash("<strong>T'est banni fils de pute.</strong>", "danger");
             } elseif ($requete['lvl'] == 1) { // Eleve
-                header('Location: agenda ');
+                header('Location: accueil ');
             } elseif ($requete['lvl'] == 2) { // Moniteur
-                header('Location: agenda-admin');
+                header('Location: accueil');
             } elseif ($requete['lvl'] == 3) { // Admin
-                header('Location: admin');
+                header('Location: accueil');
             }
         } else {
         	Alerts::setFlash("<strong>Identifiants incorrecte</strong>", "danger");
