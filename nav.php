@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>autoecole</title>
+    <title>HiroAuto</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -24,7 +24,7 @@ if(isset($_SESSION['id_u']) && $_SESSION['lvl'] ==1){
 <header>
   <div class="container">
     <div class = "autohiro-left">
-        <h1 class="text-white">AutoHiro Eleve</h1>
+        <h1 class="text-white">HiroAuto Eleve</h1>
     </div>
         <nav class = "autohiro-right">
     <ul>
@@ -44,7 +44,7 @@ elseif (isset($_SESSION['id_u']) && $_SESSION['lvl'] ==2) {
    <header>
   <div class="container">
     <div class = "autohiro-left">
-        <h1 class="text-white">AutoHiro Moniteur</h1>
+        <h1 class="text-white">HiroAuto Moniteur</h1>
     </div>
     <nav class = "autohiro-right">
     <ul>
@@ -62,7 +62,7 @@ elseif (isset($_SESSION['id_u']) && $_SESSION['lvl'] ==2) {
       <header>
   <div class="container">
     <div class = "autohiro-left">
-        <h1 class="text-white">AutoHiro Administration</h1>
+        <h1 class="text-white">HiroAuto Administration</h1>
     </div>
     <nav class = "autohiro-right">
     <ul>
@@ -77,14 +77,15 @@ elseif (isset($_SESSION['id_u']) && $_SESSION['lvl'] ==2) {
     <header>
   <div class="container">
     <div class = "autohiro-left">
-        <h1 class="text-white">AutoHiro</h1>
+        <h1 class="text-white">HiroAuto</h1>
     </div>
     <nav class = "autohiro-right">
     <ul>
       <li><a href="accueil">Accueil</a></li>
-      <li><a href="login">Connexion</a></li>      
+      <li><a href="login">Connexion</a></li> 
+      <li><a href="inscription">S'inscrire</a></li>    
       <li><a href="galerie">Galerie</a></li>
-      <li><a href="#">Contacter</a></li>
+      
    </ul>
   </nav>
   </div>
