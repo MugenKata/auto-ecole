@@ -13,7 +13,7 @@ function deleteAllMessages() {
     return $delete_all->execute();
 }
 
-if (isset($_GET['id_exp'])) { // NE FONCTIONNE PAS
+if (isset($_GET['id_exp'])) { 
    $id_exp = $_GET['id_exp'];
    $delete = deleteMessage($id_exp);
    header('Location: reception');
