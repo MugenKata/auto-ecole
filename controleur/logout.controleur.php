@@ -1,0 +1,1 @@
+<?php require "vue/logout.php"; ?>
