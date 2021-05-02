@@ -1,24 +1,38 @@
 <?php
 
-function connectBDD(){
-    
-    try{
-        $bdd = new PDO("mysql:host=localhost;dbname=ecole","root","");
+function connectBDD($hostname, $database, $username, $password) {
+    try {
+        $bdd = new PDO("mysql:host=".$hostname.";dbname=".$database.";charset=utf8","".$username."","".$password."");
         return $bdd;
-    }catch(Exception $e){
-        die("erreur bdd");
+    } catch (PDOException $e) {
+        die("Erreur de connexion au serveur MySQL : " . $e->getMessage());
     }
 }
 
-function auth($lvl){// fonction qui controle si le lvl de l utilisateur est suffisant
-    
-    if(isset($_SESSION['lvl']) && $_SESSION['lvl'] >= $lvl)
+function auth($lvl) {
+    if (isset($_SESSION['lvl']) && $_SESSION['lvl'] >= $lvl)
         return true;
     else
-        header("Location:login");
+        header("Location: nav.php");
 }
 
+function generateMdp() {
+    $chaine = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    
+    $motdepasse = "";
+   
+    $motdepasse .= $chaine[rand(0,25)];
+    $motdepasse .= $chaine[rand(0,25)];
+    
+    $motdepasse .= $chaine[rand(26,51)];
+    $motdepasse .= $chaine[rand(26,51)];
+    
+    $motdepasse .= $chaine[rand(52,60)];
+    $motdepasse .= $chaine[rand(52,60)];
+    
+    $motdepasse = str_shuffle($motdepasse);
 
+    return $motdepasse;
+}
 
-
-
+?>
