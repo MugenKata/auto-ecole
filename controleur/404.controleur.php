@@ -1,1 +1,0 @@
-<?php require "vue/404.php"; ?>

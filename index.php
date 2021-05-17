@@ -1,25 +1,34 @@
-<?php 
-session_start();
-require "core/Functions.php";
-require "core/Constants.php";
-require "core/Alerts.php";
+<?php
 
-$bdd = connectBDD(HOSTNAME, DATABASE, USERNAME, PASSWORD);
+/** Appel Automatic de toutes les classes **/
 
-if (isset($_GET['page'])) {   
-    if(file_exists("controleur/".$_GET['page'].".controleur.php"))
-        $page = $_GET['page'];
-    else
-        $page = "404";
-} else {
-    $page = "login";
+require "core/Autoloader.php";
+
+Autoloader::register();
+
+$session = new Session();
+
+require "core/functions.php";
+
+$bdd = connectBDD();
+
+if(isset($_GET['p']))
+{   
+    if(file_exists("controllers/".$_GET['p']."Controller.php"))//Verifie si la page demandée existe
+        $page = $_GET['p'];
+		
+    else//redirection vers page 404
+        header("location: error/404.php");
+}
+else{
+    $page = "home";
 }
 
-ob_start();
-require "controleur/".$page.".controleur.php";
-$content = ob_get_contents();
-ob_get_clean();
 
-require "nav.php";
+ob_start();// arrete l'affichage
+    require "controllers/".$page."Controller.php";// recuperation de la page
+$content = ob_get_clean();
+
+require "template.php";
 
 ?>
